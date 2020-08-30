@@ -75,7 +75,7 @@ var updateClock = function()
   else if (time == naptime)
   {
     image = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/cat3.jpg";
-    messageText = "Sleep tight!";
+    messageText = "Sleep tight!!";
   }
   else if (time < noon)
   {
