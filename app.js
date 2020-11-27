@@ -1,35 +1,28 @@
-(function () {
-  'use strict';
-    
-    angular.module('filApp', [])
-    .controller('filController', filController)
-    .filter('likes',LikesFilter)
-    .filter('likesall',LikesAllFilter);
+(function(){
+    'use strict';
+    angular.module('simplecal',[])
+    .controller('simplecalcontroller',function($scope) {
+       
+            
+            $scope.n1 = "";
+            $scope.n2 = "";
+            $scope.totalvalue = 0;
+            $scope.cal=function(){
+                var t=tcal();
+                $scope.totalvalue=t;
+            }
 
-    filController.$inject = ['$scope', 'likesFilter'];
-    function filController($scope,likesFilter) {
-      $scope.name= "";
-      $scope.numberOfApples= ""; 
-      $scope.address="";
-      $scope.total = 0;
-      $scope.cal=function()
-      {
-      if ($scope.numberOfApples >0) 
-      {
-        var t=$scope.numberOfApples * 150;
-        return t;
-      }
-      };
-      $scope.sayLikesMessage = function () {
-        var msg=$scope.name;
-        msg = likesFilter(msg);
-        return msg;
-      };
-    }
-    function LikesFilter(){
-      return function (input) {
-        input = input.replace("."," ");
-        return input;
-      };
-    }
-    })();
+        
+          function tcal (n1, n2) {
+            if ($scope.n1 > $scope.n2) {
+              return $scope.n1 - $scope.n2
+            } else {
+              return $scope.n2 - $scope.n1
+            }
+          }
+        
+
+
+       
+});
+})();
