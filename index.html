@@ -1,36 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--bootstrap-->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!--main-->
-    <link rel="stylesheet" href="./css/cssfile.css">
-    <!--google fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
-    <!-- font awesome-->
-    <!-- for local copies of font awesome, ensure webfont folder is also in local root directory-->
-    <link rel="stylesheet" href="./css/all.min.css">
-    </head>
-<body>
-    <p> Welcome to my page! Change colors as you need!!!</p>
-    <div class="container">
-        <div class="row max-height align-items-center text-center">
-            <div class="col">
-                <button class="btn btn-outline-secondary">Click Me!</button>
-            </div> 
+<html>
+   <head>
+      <title>Lowercase Filter Demo</title>
+      <link href="style.css" type="text/css" rel="stylesheet"></link>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+      <script src = "app.js">
+      </script>
+   </head>
+   
+   <body ng-app="mainApp">
+      <h1>Welcome to Apple Store!</h1>
+      <h4>Today's Apple Price per kg is Rs.150</h4>
+      <h2>Enter your details for placing online orders!</h2>
+      
+      <div ng-controller = "appleController">
+         <table id="main">
+            <tr>
+               <td>Enter your name:</td>
+               <td><input type = "text" ng-model = "name";></td>
+            </tr>
+            <tr>
+               <td>Enter no. of kgs of Apples: </td>
+               <td><input type = "text" ng-model = "numberOfApples" ng-keyup="cal()";></td>
+            </tr>
+            <tr>
+               <td>Enter Address to be delivered: </td>
+               <td><input type = "text" ng-model = "address";></td>
+            </tr>
+         </table>
+         <br/>
+         
+         <table border = "0">
+            <tr>
+               <td>Name (in Lower Case): </td><td>{{name | lowercase}}</td>
+            </tr>
+            <tr>
+               <td> Apples ordered: </td><td>{{numberOfApples}} kg</td>
+            </tr>
+            <tr>
+               <td>Address to be delivered: </td><td>{{address}}
+               </td>
+            </tr>
+            <tr>
+                <td>Bill due: </td><td>Rs. {{total}}
+                </td>
+             </tr>
 
-        </div>
-               
-    </div>
-    
-    <!--jQuery-->
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <!--bootstrap-->
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/javascript.js"></script>
-</body>
-</html>
+         </table>
+      </div>
+    </body>
+    </html>

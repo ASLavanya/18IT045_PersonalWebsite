@@ -1,0 +1,36 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-image: url("apple.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 1250px;
+    margin: 0 auto;
+}
+h1{
+    font-style: oblique;
+    text-shadow: 4px 4px 5px red;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+h2{
+    font-style: oblique;
+    color: crimson;
+}
+h4{
+    font-style: oblique;
+}
+table#main{
+    border: 1px solid black;
+    font-weight: bold;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
